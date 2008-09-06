@@ -1,7 +1,7 @@
 
 %define realname   Module-Release
 %define version    1.20
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{realname}
 Version:    %{version}
@@ -13,6 +13,7 @@ Source:     http://www.cpan.org/modules/by-module/Module/%{realname}-%{version}.
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
+BuildRequires: perl(CGI)
 BuildRequires: perl(ConfigReader::Simple)
 BuildRequires: perl(Crypt::SSLeay)
 BuildRequires: perl(File::Temp)
