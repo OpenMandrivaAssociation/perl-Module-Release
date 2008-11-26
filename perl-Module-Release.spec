@@ -1,7 +1,7 @@
 
 %define realname   Module-Release
-%define version    1.20
-%define release    %mkrel 2
+%define version    2.01
+%define release    %mkrel 1
 
 Name:       perl-%{realname}
 Version:    %{version}
