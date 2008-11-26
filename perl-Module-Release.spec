@@ -1,18 +1,15 @@
-
-%define realname   Module-Release
+%define module   Module-Release
 %define version    2.01
 %define release    %mkrel 1
 
-Name:       perl-%{realname}
+Name:       perl-%{module}
 Version:    %{version}
 Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Automate software releases
-Source:     http://www.cpan.org/modules/by-module/Module/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+Url:        http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/Module/%{module}-%{version}.tar.gz
 BuildRequires: perl(CGI)
 BuildRequires: perl(ConfigReader::Simple)
 BuildRequires: perl(Crypt::SSLeay)
@@ -20,8 +17,9 @@ BuildRequires: perl(File::Temp)
 BuildRequires: perl(HTTP::Message)
 BuildRequires: perl(IO::Null)
 BuildRequires: perl(Net::FTP)
-
+BuildRequires: perl(Test::Output)
 BuildArch: noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 'Module::Release' automates your software release process. It started as a
@@ -40,7 +38,7 @@ The included 'release' script is a good starting place. Don't be afraid to
 edit it for your own purposes.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{module}-%{version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -60,7 +58,7 @@ rm -rf %buildroot
 %defattr(-,root,root)
 %doc Changes README README
 %{_mandir}/man3/*
-%perl_vendorlib/*
-/usr/bin/release
-/usr/share/man/man1/release.1.lzma
+%perl_vendorlib/Module
+%_bindir/release
+%_mandir/man1/release.1*
 
