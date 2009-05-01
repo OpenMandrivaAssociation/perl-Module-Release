@@ -18,6 +18,7 @@ BuildRequires: perl(HTTP::Message)
 BuildRequires: perl(IO::Null)
 BuildRequires: perl(Net::FTP)
 BuildRequires: perl(Test::Output)
+BuildRequires: perl(Test::Without::Module)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
