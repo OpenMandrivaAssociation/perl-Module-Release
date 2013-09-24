@@ -1,15 +1,15 @@
 %define upstream_name    Module-Release
-%define upstream_version 2.05
+%define upstream_version 2.06
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Summary:	Automate software releases
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Module/Module-Release-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(CGI)
@@ -91,4 +91,5 @@ make test
 
 * Sat Sep 06 2008 cpan2dist 1.20-1mdv
 - initial mdv release, generated with cpan2dist
+
 
