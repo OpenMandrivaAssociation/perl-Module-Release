@@ -21,6 +21,7 @@ BuildRequires:	perl(IO::Null)
 BuildRequires:	perl(Net::FTP)
 BuildRequires:	perl(Test::Output)
 BuildRequires:	perl(Test::Without::Module)
+BuildRequires:	perl(LWP::UserAgent)
 BuildArch:	noarch
 
 %description
