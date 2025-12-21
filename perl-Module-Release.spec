@@ -11,6 +11,7 @@ Summary:	Automate software releases
 Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Module/Module-Release-%{upstream_version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(CGI)
 BuildRequires:	perl(ConfigReader::Simple)
