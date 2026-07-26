@@ -1,15 +1,13 @@
 %define upstream_name    Module-Release
-%define upstream_version 2.06
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	2.06
+Release:	4
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Summary:	Automate software releases
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Module/Module-Release-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Module/Module-Release-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -42,7 +40,7 @@ The included 'release' script is a good starting place. Don't be afraid to
 edit it for your own purposes.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -69,8 +67,7 @@ make test
 * Thu Jun 18 2009 Jérôme Quelin <jquelin@mandriva.org> 2.50.0-1mdv2010.0
 + Revision: 386974
 - update to 2.05
-- using %%perl_convert_version
-- fix license tag
+- using %2.06 fix license tag
 
 * Fri May 01 2009 Jérôme Quelin <jquelin@mandriva.org> 2.04-1mdv2010.0
 + Revision: 369727
